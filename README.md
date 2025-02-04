@@ -1,7 +1,7 @@
 # アプリケーションPigly
 
 ## 環境構築
-git clone 
+git clone git@github.com:murata-am/pigly.git
 
 dockerビルド docker-compose up -d --build
 
