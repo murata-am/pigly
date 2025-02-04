@@ -40,6 +40,7 @@ Laravel 8.83.8
 MySQL 8.0.26
 
 ## ER図
+![er-diagram weightlog](https://github.com/user-attachments/assets/e278f914-ba86-4854-8f54-657f6ba47b98)
 
 
 ## URL
