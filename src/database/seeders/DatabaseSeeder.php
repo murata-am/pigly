@@ -8,17 +8,15 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
     public function run()
     {
-        $user = User::factory()->create();
-
-        WeightLog::factory(35)->create([
+        $user = User::factory()->fixedUser()->create();
+        WeightTarget::factory()->create([
             'user_id' => $user->id,
+            'target_weight' => 50.0,
         ]);
+
+        WeightLog::factory(35)->for($user)->create();
+
     }
 }

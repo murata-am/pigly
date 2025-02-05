@@ -71,9 +71,9 @@ class WeightLogController extends Controller
     public function weight_logs()
     {
         $user = Auth::user();
-        $weight_logs = WeightLog::where('user_id', auth()->id())->paginate(8);
-        $latest_weight = WeightLog::where('user_id', auth()->id())->orderBy('created_at', 'desc')->first();
-        $weight_target =WeightTarget::where('user_id', auth()->id())->first();
+        $weight_logs = WeightLog::where('user_id', $user->id)->paginate(8);
+        $latest_weight = WeightLog::where('user_id', $user->id)->orderBy('created_at', 'desc')->first();
+        $weight_target =WeightTarget::where('user_id', $user->id)->first();
 
         return view('weight_logs', compact('weight_logs', 'weight_target', 'latest_weight'));
     }

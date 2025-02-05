@@ -21,7 +21,7 @@
 
                 <div class="content_inner">
                     <div class="content__label">目標体重</div>
-                    <p class="weight_target">{{$weight_target->weight_target}}kg</p>
+                    <p class="weight_target">{{ $weight_target->weight_target ?? '未設定' }}kg</p>
 
                     <div class="content__label">目標まで</div>
                     <p class="remaining_weight">
@@ -57,12 +57,12 @@
                     </tr>
                     @foreach ($weight_logs as $weight_log)
                         <tr >
-                            <td class="log_data">{{$weight_log->data}}</td>
+                            <td class="log_data">{{$weight_log->created_at->format('Y-m-d')}}</td>
                             <td class="log_data">{{$weight_log->weight}}</td>
                             <td class="log_data">{{$weight_log->calories}}</td>
                             <td class="log_data">{{$weight_log->exercise_time}}</td>
                             <td class="edit_icon">
-                                <a href="/weight_logs/{:weightLogId}/update">更新アイコン</a>
+                                <a href="/weight_logs/{{ $weight_log->id }}/update">更新アイコン</a>
                             </td>
                         </tr>
                     @endforeach
