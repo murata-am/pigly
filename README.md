@@ -11,20 +11,6 @@ docker-compose exec php bash
 
 composer install
 
-「.env.example」を 「.env」に名前を変更して作成。 「.env」の環境変数を変更する
-
-DB_CONNECTION=mysql
-
-DB_HOST=mysql
-
-DB_PORT=3306
-
-DB_DATABASE=laravel_db
-
-DB_USERNAME=laravel_user
-
-DB_PASSWORD=laravel_pass
-
 アプリケーションキーの作成
 php artisan key:generate
 
