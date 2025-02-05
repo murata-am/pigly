@@ -34,6 +34,10 @@ php artisan migrate
 シーディングの実行
 php artisan db:seed
 
+## テストユーザーのログイン情報　　　　
+メールアドレス：test@example.com      
+パスワード：testpass      
+
 ## 使用技術(実行環境)
 PHP 8.4.1  
 Laravel 8.83.8  
