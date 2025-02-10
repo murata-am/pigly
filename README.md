@@ -34,4 +34,4 @@ MySQL 8.0.26
 
 
 ## URL
-開発環境: http://localhost/weight.logs
+開発環境: http://localhost/login
