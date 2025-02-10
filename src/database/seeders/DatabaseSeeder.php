@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\WeightLog;
+use App\Models\WeightTarget;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
